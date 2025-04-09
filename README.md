@@ -18,6 +18,21 @@ A lightweight, accessible, and customizable modal package for React. This packag
 ### yarn
 `yarn add react-lite-modal`
 
+## How to Render the Modal
+
+Our modal component requires a `div` with the `id="modal-root"` in your HTML. This is where the modal will be appended to the DOM. By rendering it outside the normal DOM flow, it helps ensure that the modal's overlay and content are displayed above other content without being affected by the parent component's z-index or overflow properties.
+
+### Step 1: Add the Modal Root to `public/index.html`
+
+In your `public/index.html` file, add the following `div` just inside the `<body>` tag:
+
+```html
+<body>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+</body>
+```
+
 ## Usage
 
 Here’s a basic example of how to use the modal component:
